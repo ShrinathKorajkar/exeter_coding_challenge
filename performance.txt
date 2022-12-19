@@ -1,2 +1,2 @@
-Time to process: 0 minutes 34.51 seconds
-Memory used: 0 MB
+Time to process: 0 minutes 34 seconds
+Memory used: 16.6 MB

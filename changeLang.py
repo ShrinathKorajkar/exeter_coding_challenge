@@ -1,6 +1,8 @@
-import csv, os
+import csv, os, psutil, time
 
 os.chdir(os.path.dirname(__file__))
+process = psutil.Process(os.getpid())
+start = time.process_time()
 
 # READING THE WORDS TO CHANGE
 findWordsfile = open('find_words.txt', 'r')
@@ -48,3 +50,6 @@ writer = csv.writer(frequencyfile)
 for key in changedic.keys():
     writer.writerow([key, changedic[key], countdic[key]])
 frequencyfile.close()
+
+print(process.memory_info().rss)
+print(time.process_time() - start)
